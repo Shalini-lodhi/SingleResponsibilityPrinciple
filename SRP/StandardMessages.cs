@@ -8,7 +8,7 @@ namespace SRP
 {
     public class StandardMessages
     {
-        public static void Welcomemessage()
+        public static void WelcomeMessage()
         {
             Console.WriteLine("Welcome to SRP!");
         }
