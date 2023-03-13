@@ -10,8 +10,7 @@ internal class Program
         Person person = UserDataCapture.Capture();
 
         UserValidator.Validate(person);
-       
-        //Create a username for the person
-        Console.WriteLine($"User name is {person.FirstName} {person.LastName}");
+
+        AccountGenerator.CreateAccount(person);
     }
 }
