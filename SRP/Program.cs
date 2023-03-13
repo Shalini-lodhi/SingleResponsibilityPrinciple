@@ -5,6 +5,8 @@ internal class Program
 {
     private static void Main(string[] args)
     {
+        StandardMessages.Welcomemessage();
+
         //Ask for user informatin
         Person person = new Person();
 
@@ -17,15 +19,13 @@ internal class Program
         //checks to be sure that first and last name are valid
         if (string.IsNullOrWhiteSpace(person.FirstName))
         {
-            Console.WriteLine("Not a valid first name");
-            Console.WriteLine("Correct first name: ");
+            StandardMessages.FirstNameErrorMessgae();
             person.FirstName = Console.ReadLine();
             //return;
         }
         if (string.IsNullOrWhiteSpace(person.LastName))
         {
-            Console.WriteLine("Not a valid last name");
-            Console.WriteLine("Write correct Last Name: ");
+            StandardMessages.LastNameErrormessage();
             person.LastName = Console.ReadLine();
             //return;
         }
