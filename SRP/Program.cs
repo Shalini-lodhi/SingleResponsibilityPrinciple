@@ -7,14 +7,7 @@ internal class Program
     {
         StandardMessages.Welcomemessage();
 
-        //Ask for user informatin
-        Person person = new Person();
-
-        Console.WriteLine("Your first name: ");
-        person.FirstName = Console.ReadLine();
-
-        Console.WriteLine("Your Last Name: ");
-        person.LastName = Console.ReadLine();
+        Person person = UserDataCapture.Capture();
 
         //checks to be sure that first and last name are valid
         if (string.IsNullOrWhiteSpace(person.FirstName))
